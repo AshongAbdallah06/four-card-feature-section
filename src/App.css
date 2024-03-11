@@ -1,38 +1,131 @@
+* {
+    box-sizing: border-box;
+    padding: 5px 0;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-text {
+    font-size: 30px;
+    font-weight: 200;
+    margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+    margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text {
+    width: 500px;
+    font-size: 15px;
+    color: hsl(229, 6%, 66%);
+    font-weight: 200;
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    place-items: center;
+    min-height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.block {
+    width: 250px;
+    padding: 30px;
+    white-space: wrap;
+    height: 200px;
+    position: relative;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.block:hover {
+    background-color: hsl(0, 0%, 95%);
+    transform: translateY(-10px);
+}
+
+.block-text {
+    font-size: 10px;
+    color: hsl(229, 6%, 66%);
+}
+
+img {
+    position: absolute;
+    right: 20px;
+    height: 50px;
+
+}
+
+.border-top {
+    box-shadow: 0px 5px 5px rgba(99, 99, 99, 0.5);
+    border-radius: 10px;
+} 
+
+.cont {
+    display: flex;
+    height: 430px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.red {
+    border-top: 5px solid hsl(0, 78%, 62%);
+    margin-bottom: 30px;
+}
+
+.orange {
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+
+.blue {
+    border-top: 5px solid hsl(180, 62%, 55%);
+  
+}
+
+.darkblue {
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+
+@media (max-width: 888px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-text {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    h1 {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text {
+        width: 250px;
+    }
+
+    .block {
+        margin-bottom: 30px;
+    }   
 }
